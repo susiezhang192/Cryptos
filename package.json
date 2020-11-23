@@ -1,0 +1,18 @@
+{
+  "name": "cryptos",
+  "description": "Web app that manages patient information.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/susiezhang192/Cryptos"
+  },
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "~1.18",
+    "express": "~4.16",
+    "mongoose": "^5.10.15"
+  },
+  "devDependencies": {
+    "es-module-loader": "^2.3.0"
+  }
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="cryptoApp" ng-controller="cryptoCtrl">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+    <table class="b">
+        <tr>
+            <th>Currency</th>
+            <th>Price</th>
+            <th>24h</th>
+            <th>7d</th>
+            <th>1m</th>
+            <th>24h Volume</th>
+            <th>Mkt Cap</th>
+        </tr>
+        <tr ng-repeat="crypto in cryptos">
+            <td>{{crypto._id}}</td>
+            <td>{{crypto.docs[0].Close}}</td>
+            <td>{{((crypto.docs[0].Close - crypto.docs[1].Close)*100/(crypto.docs[1].Close))|number : 1}}%</td>
+            <td>{{((crypto.docs[0].Close - crypto.docs[6].Close)*100/(crypto.docs[6].Close))|number : 1}}%</td>
+            <td>{{((crypto.docs[0].Close - crypto.docs[29].Close)*100/(crypto.docs[29].Close))|number : 1}}%</td>
+            <td>{{crypto.docs[0].Volume}}</td>
+            <td>{{crypto.docs[0].MarketCap}}</td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>
