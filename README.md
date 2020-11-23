@@ -18,6 +18,7 @@
 	 b. Run MongoDb Tools installer
 
 (3) Import the excel file using MongDb tools
+
     	a. mongoimport --type csv -d Cryptos -c cryptos --headerline --drop crypto_historical.csv
 	 
 (4) Install Node.js
